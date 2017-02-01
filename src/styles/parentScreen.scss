@@ -1,13 +1,12 @@
-.parentHeader {
-  text-align: center;
-  margin-top: 0;
-}
-
 .choresPendingApproval {
   display: flex;
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.addChoreHeader {
+  color: white;
 }
 
 .addChore {

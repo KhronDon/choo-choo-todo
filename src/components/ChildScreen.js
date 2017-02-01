@@ -7,11 +7,14 @@ class ChildScreen extends Component {
     return <div>
       <header className='childHeader'>
         <h2>Child Name</h2>
-        <button className='choresRemaining'>Chores Remaining</button>
+        <button className='home'>
+          <Link to='/home'>Home</Link>
+        </button>
         <button className='credits'>
           <Link to='/bank'>$$</Link>
         </button>
       </header>
+      <h3 className='choresRemaining'>4/7</h3>
       <h3 className='choreListHeader'>Chores</h3>
       <section className='choreList'>
         <table>

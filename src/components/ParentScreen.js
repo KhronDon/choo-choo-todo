@@ -5,17 +5,17 @@ class ParentScreen extends Component {
 
   render () {
     return <div>
-      <header className='parentHeader'>
+      <header className='mainHeader'>
         <h2>Parent Name</h2>
-        <button className='home'>
-          <Link to='/home'>Home</Link>
-        </button>
-        <button className='choresPendingApproval'>
-          <Link to='/chores'>Chore Approval</Link>
-        </button>
       </header>
+      <button className='home'>
+        <Link to='/home'>Home</Link>
+      </button>
+      <button className='choresPendingApproval'>
+        <Link to='/chores'>Chore Approval</Link>
+      </button>
       <div className='addChore'>
-        <h1>Add Chore</h1>
+        <h1 className='addChoreHeader'>Add Chore</h1>
         <ul>
           <li>Child Select</li>
           <li>

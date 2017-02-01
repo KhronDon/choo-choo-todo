@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 class AddRemoveChild extends Component {
 
   render () {
     return <div>
       <h1 className='mainHeader'>Add Child</h1>
-      <section className='homeButton'>
-        <button>Go Home</button>
+      <section className='home'>
+        <button>
+          <Link to='/home'>Go Home</Link>
+        </button>
       </section>
       <form className='newChildInput'>
         <label>

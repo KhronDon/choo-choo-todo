@@ -11,8 +11,12 @@ body {
   @include font-smoothing(on);
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
-  background-color: lightblue;
   height: 100vh;
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(hsla(39, 100%, 50%, 1), hsla(177, 100%, 50%, 1)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(hsla(39, 100%, 50%, 1), hsla(177, 100%, 50%, 1)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(hsla(39, 100%, 50%, 1), hsla(177, 100%, 50%, 1)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(hsla(39, 100%, 50%, 1), hsla(177, 100%, 50%, 1)); /* Standard syntax */
 }
 
 #root {

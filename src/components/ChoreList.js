@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 class ChoreList extends Component {
 
   render () {
     return <div>
-      <h1 className='choresPendingHeader'>Chore List</h1>
+      <button className='home'>
+        <Link to='/home'>Home</Link>
+      </button>
+      <h1 className='mainHeader'>Chore List</h1>
       <table>
         <tbody>
           <tr>
