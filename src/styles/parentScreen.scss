@@ -1,0 +1,43 @@
+.parentHeader {
+  text-align: center;
+  margin-top: 0;
+}
+
+.choresPendingApproval {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.addChore {
+  text-align: center;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+.choreInput {
+  width: 75vw;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.creditInput {
+  width: 30px;
+  margin-bottom: 25px;
+}
+
+.newChoreSubmit {
+  margin-top: 50px;
+}
+
+.addRemoveChild {
+  text-align: center;
+  margin-top: 100px;
+}

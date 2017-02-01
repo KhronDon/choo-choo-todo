@@ -1,0 +1,37 @@
+
+.childHeader {
+  text-align: center;
+}
+
+.choresRemaining {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.credits {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.choreListHeader {
+  text-align: center;
+}
+
+.choreList {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  td {
+    border: 2px solid black;
+  }
+}
+
+.chore {
+  width: 75vw;
+  text-align: left;
+}

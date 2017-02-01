@@ -1,0 +1,16 @@
+.logIn {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.logInButton {
+  background-color: white;
+  border: solid 2px navy;
+  border-radius: 5px;
+  width: 120px;
+  height: 30px;
+  display: block;
+  vertical-align: middle;
+  position: absolute;
+}

@@ -11,4 +11,21 @@ body {
   @include font-smoothing(on);
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
+  background-color: lightblue;
+  height: 100vh;
 }
+
+#root {
+  width: 100%;
+}
+
+@import 'home';
+@import 'parentScreen';
+@import 'childScreen';
+@import 'delivery';
+@import 'bank';
+@import 'logIn';
+@import 'choreList';
+@import 'addRemove';
+@import 'group';
+@import 'homeButton';

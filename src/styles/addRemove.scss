@@ -1,0 +1,36 @@
+.mainHeader {
+  text-align: center;
+}
+
+.homeButton {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.newChildInput {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
+.submitNewChild {
+  display: flex;
+  justify-content: center;
+}
+
+.activeChildTable {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
+.activeChildName {
+  width: 80vw;
+  background-color: white;
+}
+
+.removeSelectedChild {
+  text-align: center;
+}
