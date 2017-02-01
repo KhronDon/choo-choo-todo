@@ -8,7 +8,7 @@ class AddRemoveChild extends Component {
       <h1 className='mainHeader'>Add Child</h1>
       <section className='home'>
         <button>
-          <Link to='/home'>Go Home</Link>
+          <Link to='/'>Go Home</Link>
         </button>
       </section>
       <form className='newChildInput'>

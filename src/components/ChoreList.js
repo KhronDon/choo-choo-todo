@@ -6,7 +6,7 @@ class ChoreList extends Component {
   render () {
     return <div>
       <button className='home'>
-        <Link to='/home'>Home</Link>
+        <Link to='/'>Home</Link>
       </button>
       <h1 className='mainHeader'>Chore List</h1>
       <table>

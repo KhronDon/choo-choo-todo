@@ -8,7 +8,7 @@ class ChildScreen extends Component {
       <header className='childHeader'>
         <h2>Child Name</h2>
         <button className='home'>
-          <Link to='/home'>Home</Link>
+          <Link to='/'>Home</Link>
         </button>
         <button className='credits'>
           <Link to='/bank'>$$</Link>

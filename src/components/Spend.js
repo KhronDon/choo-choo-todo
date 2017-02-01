@@ -8,7 +8,7 @@ class Spend extends Component {
       <h2 className='mainHeader'>Spend Credits</h2>
       <section className='homeButton'>
         <button>
-          <Link to='/home'>Go Home</Link>
+          <Link to='/'>Go Home</Link>
         </button>
       </section>
     </div>

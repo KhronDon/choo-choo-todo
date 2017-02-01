@@ -9,7 +9,7 @@ class ParentScreen extends Component {
         <h2>Parent Name</h2>
       </header>
       <button className='home'>
-        <Link to='/home'>Home</Link>
+        <Link to='/'>Home</Link>
       </button>
       <button className='choresPendingApproval'>
         <Link to='/chores'>Chore Approval</Link>
