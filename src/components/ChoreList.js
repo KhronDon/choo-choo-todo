@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import homeIcon from '../Images/home_4.png'
 
 class ChoreList extends Component {
 
   render () {
     return <div>
-      <button className='home'>
-        <Link to='/'>Home</Link>
-      </button>
+      <section className='home'>
+        <Link to='/'>
+          <img src={homeIcon} height='50px' width='50px' />
+        </Link>
+      </section>
       <h1 className='mainHeader'>Chore List</h1>
       <table>
         <tbody>

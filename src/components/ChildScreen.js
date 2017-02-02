@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import homeIcon from '../Images/home_4.png'
+import creditIcon from '../Images/credit_4.png'
 
 class ChildScreen extends Component {
 
@@ -7,12 +9,16 @@ class ChildScreen extends Component {
     return <div>
       <header className='childHeader'>
         <h2>Child Name</h2>
-        <button className='home'>
-          <Link to='/'>Home</Link>
-        </button>
-        <button className='credits'>
-          <Link to='/bank'>$$</Link>
-        </button>
+        <section className='home'>
+          <Link to='/'>
+            <img src={homeIcon} height='50px' width='50px' />
+          </Link>
+        </section>
+        <section className='credits'>
+          <Link to='/bank'>
+            <img src={creditIcon} height='50px' width='50px' />
+          </Link>
+        </section>
       </header>
       <h3 className='choresRemaining'>4/7</h3>
       <h3 className='choreListHeader'>Chores</h3>

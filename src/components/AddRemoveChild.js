@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import homeIcon from '../Images/home_4.png'
 
 class AddRemoveChild extends Component {
 
@@ -7,9 +8,9 @@ class AddRemoveChild extends Component {
     return <div>
       <h1 className='mainHeader'>Add Child</h1>
       <section className='home'>
-        <button>
-          <Link to='/'>Go Home</Link>
-        </button>
+        <Link to='/'>
+          <img src={homeIcon} height='50px' width='50px' />
+        </Link>
       </section>
       <form className='newChildInput'>
         <label>

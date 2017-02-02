@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import homeIcon from '../Images/home_4.png'
 
 class ParentScreen extends Component {
 
@@ -8,9 +9,11 @@ class ParentScreen extends Component {
       <header className='mainHeader'>
         <h2>Parent Name</h2>
       </header>
-      <button className='home'>
-        <Link to='/'>Home</Link>
-      </button>
+      <section className='home'>
+        <Link to='/'>
+          <img src={homeIcon} height='50px' width='50px' />
+        </Link>
+      </section>
       <button className='choresPendingApproval'>
         <Link to='/chores'>Chore Approval</Link>
       </button>

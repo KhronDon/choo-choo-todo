@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Router, Route, browserHistory, Link } from 'react-router'
+import { Router, Route, browserHistory } from 'react-router'
 
 import AddRemoveChild from './AddRemoveChild'
 import Bank from './Bank'
