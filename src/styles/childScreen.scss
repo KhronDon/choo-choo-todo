@@ -6,8 +6,10 @@
 .credits {
   display: flex;
   position: absolute;
-  top: 10;
-  right: 10;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .choreListHeader {

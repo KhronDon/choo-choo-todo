@@ -1,0 +1,6 @@
+mutation CreateFamily ($ownerId: ID!, $name: String! ) {
+  createFamily(ownerId: $ownerId, name: $name) {
+    id
+    name
+  }
+}

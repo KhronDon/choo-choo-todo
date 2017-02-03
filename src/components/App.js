@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import { Router, Route, browserHistory } from 'react-router'
+import { Router, Route, browserHistory, IndexRoute } from 'react-router'
+import { ApolloProvider } from 'react-apollo'
+import withAuth from '../utils/withAuth'
 
 import AddRemoveChild from './AddRemoveChild'
 import Bank from './Bank'
@@ -12,29 +14,39 @@ import EnterPasscode from './EnterPasscode'
 import GroupSelection from './GroupSelection'
 import Home from './Home'
 import LogIn from './LogIn'
+import Layout from './Layout'
 import ParentScreen from './ParentScreen'
 import Spend from './Spend'
 
+@withAuth
 class App extends Component {
 
+  requireAuth = (nextState, replace) => {
+    if (!this.props.auth.isSignedIn) {
+      replace({ pathname: '/' })
+    }
+  }
+
   render () {
-    return <div>
+    return <ApolloProvider client={this.props.client.apollo}>
       <Router history={browserHistory}>
-        <Route path='/addremove' component={AddRemoveChild} />
-        <Route path='/spend' component={Spend} />
-        <Route path='/bank' component={Bank} />
-        <Route path='/childscreen' component={ChildScreen} />
-        <Route path='/approval' component={ChoreApproval} />
-        <Route path='/chores' component={ChoreList} />
-        <Route path='/createpasscode' component={CreatePasscode} />
-        <Route path='/delivery' component={Delivery} />
-        <Route path='/enterpasscode' component={EnterPasscode} />
-        <Route path='/group' component={GroupSelection} />
-        <Route path='/' component={Home} />
-        <Route path='/login' component={LogIn} />
-        <Route path='/parentscreen' component={ParentScreen} />
+        <Router path='/' component={Layout}>
+          <IndexRoute component={Home} />
+          <Route path='/addremove' component={AddRemoveChild} />
+          <Route path='/spend' component={Spend} />
+          <Route path='/bank' component={Bank} />
+          <Route path='/childscreen' component={ChildScreen} />
+          <Route path='/approval' component={ChoreApproval} />
+          <Route path='/chores' component={ChoreList} />
+          <Route path='/createpasscode' component={CreatePasscode} />
+          <Route path='/delivery' component={Delivery} />
+          <Route path='/enterpasscode' component={EnterPasscode} />
+          <Route path='/group' component={GroupSelection} />
+          <Route path='/login' component={LogIn} />
+          <Route path='/parentscreen' component={ParentScreen} />
+        </Router>
       </Router>
-    </div>
+    </ApolloProvider>
   }
 }
 

@@ -1,0 +1,9 @@
+query UserOwnedFamilies {
+  user {
+    id
+    ownedFamilies {
+      id
+      name
+    }
+  }
+}
