@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router'
 import { graphql } from 'react-apollo'
 import withAuth from '../utils/withAuth'
-import update from 'immutability-helper'
 
-import CreateFamily from '../graphql/mutation/CreateFamily.gql'
+import { mutationCreateFamily, queryUserOwnedFamilies } from '../graphql'
 
+@withRouter
 @withAuth
-@graphql(CreateFamily, { name: 'createFamily' })
+@graphql(...queryUserOwnedFamilies())
+@graphql(...mutationCreateFamily())
 class GroupSelection extends Component {
 
   state = {
@@ -15,17 +17,14 @@ class GroupSelection extends Component {
 
   _createFamily = (e) => {
     e.preventDefault()
-    this.props.createFamily({
+    this.props.mutationCreateFamily({
       variables: {
         ownerId: this.props.client.userId,
         name: this.state.newFamilyName
       },
-      updateQueries: {
-        userOwnedFamilies: (prev, {mutationResult}) => {
-          const family = mutationResult.data.createFamily
-          return update(prev, { user: { ownedFamilies: { $push: [family] } } })
-        }
-      }
+      refetchQueries: [{query: queryUserOwnedFamilies(false)}]
+    }).then(() => {
+      this.props.router.push('/')
     })
     console.log('creating a family')
   }
@@ -34,8 +33,19 @@ class GroupSelection extends Component {
     this.setState({ newFamilyName: e.target.value })
   }
 
+  families () {
+    if (this.props.queryUserOwnedFamilies.loading) return <li>loading</li>
+    return this.props.queryUserOwnedFamilies.user.ownedFamilies.map((family, i) => {
+      return <li key={i}>{family.name} </li>
+    })
+  }
+
   render () {
     return <div>
+      <ul>
+        {this.families()}
+      </ul>
+      <hr />
       <form onSubmit={this._createFamily}>
         <input
           type='text'
