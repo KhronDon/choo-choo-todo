@@ -1,0 +1,10 @@
+query Family ($id: ID!) {
+  Family(id: $id) {
+    id
+    name
+    memberships {
+      name
+      email
+    }
+  }
+}

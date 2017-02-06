@@ -43,7 +43,7 @@ class App extends Component {
           <Route path='/enterpasscode' component={EnterPasscode} />
           <Route path='/group' component={GroupSelection} />
           <Route path='/login' component={LogIn} />
-          <Route path='/parentscreen' component={ParentScreen} />
+          <Route path='/parent/:id' component={ParentScreen} />
         </Router>
       </Router>
     </ApolloProvider>

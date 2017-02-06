@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import homeIcon from '../Images/home_4.png'
+import bank from '../Images/Train_bank.png'
 
 class Bank extends Component {
 
@@ -12,7 +13,7 @@ class Bank extends Component {
           <img src={homeIcon} height='50px' width='50px' />
         </Link>
       </section>
-      <img className='bank' src={'https://img.clipartfest.com/d71f05b7f0842f09bdd1e92596f912bd_bank-clipart-bank-clip-art-2-bank-clipart_468-594.png'} />
+      <img className='bank' src={bank} />
       <h3 className='creditsAvailable'>Credits $$</h3>
     </div>
   }

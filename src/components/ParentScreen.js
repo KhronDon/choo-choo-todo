@@ -1,13 +1,25 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import homeIcon from '../Images/home_4.png'
+import { graphql } from 'react-apollo'
 
+import { queryFamily } from '../graphql'
+
+@graphql(...queryFamily({
+  options: props => ({ variables: { id: props.params.id } })
+}))
 class ParentScreen extends Component {
+
+  familyHeader () {
+    if (this.props.queryFamily.loading) return '...'
+    console.log(this.props.queryFamily)
+    return this.props.queryFamily.Family.name
+  }
 
   render () {
     return <div>
       <header className='mainHeader'>
-        <h2>Parent Name</h2>
+        <h2>{ this.familyHeader() }</h2>
       </header>
       <section className='home'>
         <Link to='/'>

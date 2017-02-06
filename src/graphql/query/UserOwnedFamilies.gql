@@ -4,6 +4,11 @@ query UserOwnedFamilies {
     ownedFamilies {
       id
       name
+      memberships {
+        id
+        name
+        email
+      }
     }
   }
 }

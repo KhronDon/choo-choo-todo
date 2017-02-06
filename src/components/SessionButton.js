@@ -13,7 +13,7 @@ class SessionButton extends Component {
 
   render () {
     const { auth } = this.props
-    return <button onClick={this.handleClick}>
+    return <button className='signInButton' onClick={this.handleClick}>
       {auth.isSignedIn ? 'Sign Out' : 'Sign In'}
     </button>
   }

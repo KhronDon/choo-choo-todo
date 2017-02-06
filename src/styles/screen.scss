@@ -2,14 +2,13 @@
 //@import 'backgroundImage' from '..Images/IMG_1924.JPG';
 
 $base-text-size: 16px;
-$base-font-family: sans-serif;
+$base-font-family: 'Pangolin', sans-serif;
 
 html {
   text-size-adjust: 100%;
 }
 
 body {
-  @include font-smoothing(on);
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
   height: 100vh;
@@ -19,6 +18,19 @@ body {
 
 #root {
   width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'DK Crayon Crumble';
+}
+
+button {
+  font-family: $base-font-family;
 }
 
 @import 'home';
@@ -31,3 +43,5 @@ body {
 @import 'addRemove';
 @import 'group';
 @import 'homeButton';
+@import 'family';
+@import 'modal';
