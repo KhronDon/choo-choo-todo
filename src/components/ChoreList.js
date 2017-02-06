@@ -41,7 +41,7 @@ class ChoreList extends Component {
         </tbody>
       </table>
       <section className='submitCompletedChores'>
-        <button>Submit</button>
+        <button className='submitCompletedChoresButton'>Submit</button>
       </section>
     </div>
   }

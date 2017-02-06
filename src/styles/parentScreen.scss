@@ -1,8 +1,8 @@
 .choresPendingApproval {
   display: flex;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
 }
 
 .addChoreHeader {
@@ -11,6 +11,7 @@
 
 .addChore {
   text-align: center;
+  color: red;
 
   ul {
     display: flex;
@@ -25,18 +26,47 @@
   width: 75vw;
   margin-top: 20px;
   margin-bottom: 20px;
+  background-color: hsla(196, 51%, 61%, 0.5);
+  color: white;
+  font-size: 15px;
+}
+
+.creditsLabel {
+  color: white;
 }
 
 .creditInput {
-  width: 30px;
+  width: 40px;
   margin-bottom: 25px;
+  background-color: hsla(196, 51%, 61%, 0.5);
+  color: white;
+  font-size: 15px;
 }
 
 .newChoreSubmit {
   margin-top: 50px;
+
+  button {
+    background-color: white;
+    color: hsla(196, 51%, 61%, 0.5);
+    border-radius: 5px;
+    font-size: 20px;
+  }
 }
 
 .addRemoveChild {
   text-align: center;
   margin-top: 100px;
+
+  button {
+    background-color: white;
+    color: hsla(196, 51%, 61%, 0.5);
+    border-radius: 5px;
+    font-size: 20px;
+
+    a {
+      text-decoration: none;
+      color: hsla(196, 51%, 61%, 0.5);
+    }
+  }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 import homeIcon from '../Images/home_4.png'
 import { graphql } from 'react-apollo'
+import checkIcon from '../images/Train_check.png'
 
 import { queryFamily } from '../graphql'
 
@@ -23,12 +24,14 @@ class ParentScreen extends Component {
       </header>
       <section className='home'>
         <Link to='/'>
-          <img src={homeIcon} height='50px' width='50px' />
+          <img src={homeIcon} height='55px' width='55px' />
         </Link>
       </section>
-      <button className='choresPendingApproval'>
-        <Link to='/chores'>Chore Approval</Link>
-      </button>
+      <section className='choresPendingApproval'>
+        <Link to='/chores'>
+          <img src={checkIcon} height='50px' widht='50px' />
+        </Link>
+      </section>
       <div className='addChore'>
         <h1 className='addChoreHeader'>Add Chore</h1>
         <ul>
@@ -36,15 +39,14 @@ class ParentScreen extends Component {
           <li>
             <form>
               <label>
-                Chore:
-                <input className='choreInput' type='text' name='chore' />
+                <input className='choreInput' placeholder='Chore Input' type='text' name='chore' />
               </label>
             </form>
           </li>
+          <li className='creditsLabel'>Credits</li>
           <li>
             <form>
               <label>
-                Credit:
                 <input className='creditInput' type='number' name='credits' />
               </label>
             </form>

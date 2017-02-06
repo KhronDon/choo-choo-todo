@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import homeIcon from '../Images/home_4.png'
+import homeIcon from '../images/home_4.png'
+import trashCan from '../images/Trash_icon.png'
 
 class AddRemoveChild extends Component {
 
@@ -50,7 +51,9 @@ class AddRemoveChild extends Component {
       </section>
       <section className='removeSelectedChild'>
         <h4>Remove Selected Child</h4>
-        <button>Trash Can</button>
+        <button>
+          <img src={trashCan} height='50px' width='50px' />
+        </button>
       </section>
     </div>
   }

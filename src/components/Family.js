@@ -13,7 +13,7 @@ class Family extends Component {
     return <li>
       <h2 className='familyHeader'>{this.props.name}</h2>
       <table className='parentList'>
-        <caption><Link to={`/parent/${this.props.id}`}>Parent(s)</Link></caption>
+        <caption><Link to={`/parent/${this.props.id}`}>Grown Ups</Link></caption>
         <tbody>
           {this.props.memberships.map((member, i) => {
             return <tr key={i}>
@@ -27,7 +27,7 @@ class Family extends Component {
           })}
         </tbody>
       </table>
-      <button onClick={this._addMember}>Add Family Member</button>
+      <button className='addFamilyMemberButton' onClick={this._addMember}>Add Family Member</button>
       <table className='chidList'>
         <caption>Child(ren)</caption>
         <tbody>

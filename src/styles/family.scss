@@ -1,3 +1,27 @@
+.mainHeader {
+  font-size: 30px;
+}
+
+.parentList {
+  caption {
+    background-color: white;
+    color: hsla(196, 51%, 61%, 0.5);
+    border-radius: 5px;
+    font-size: 25px;
+    padding: 2px;
+  }
+
+  a {
+    text-decoration: none;
+    color: hsla(196, 51%, 61%, 0.5);
+  }
+}
+
+.familyHeader {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
 .memberName {
   color: white;
   background-color: hsla(196, 51%, 61%, 0.5);
