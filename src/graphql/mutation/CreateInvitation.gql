@@ -1,5 +1,5 @@
 mutation CreateInvitation ($email: String!, $name: String!, $familyId: ID!) {
-  CreateInvitation (email: $email, name: $name, familyId: $familyId) {
+  createInvitation (email: $email, name: $name, familyId: $familyId) {
     id
     email
     name

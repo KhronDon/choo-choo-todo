@@ -2,9 +2,9 @@ query Family ($id: ID!) {
   Family(id: $id) {
     id
     name
-    memberships {
+    kids {
+      id
       name
-      email
     }
   }
 }

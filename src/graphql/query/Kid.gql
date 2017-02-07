@@ -1,0 +1,11 @@
+query Kid ($id: ID!) {
+  Kid(id: $id) {
+    id
+    name
+    chores {
+      id
+      description
+      worth
+    }
+  }
+}

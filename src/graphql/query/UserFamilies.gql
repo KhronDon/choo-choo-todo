@@ -11,6 +11,10 @@ query UserFamilies($email: String!) {
       owner {
         id
       }
+      kids {
+        id
+        name
+      }
       invitations {
         id
         name

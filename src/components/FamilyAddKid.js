@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
+import withAuth from '../utils/withAuth'
 import ui from '../ui'
 
 import {
   mutationCreateKid,
-  queryUserOwnedFamilies
+  queryUserFamilies
 } from '../graphql'
 
+@withAuth
 @graphql(...mutationCreateKid())
 class FamilyAddKid extends Component {
 
@@ -25,7 +27,7 @@ class FamilyAddKid extends Component {
         familyId: this.props.id,
         name: this.state.name
       },
-      refetchQueries: [{ query: queryUserOwnedFamilies(false) }]
+      refetchQueries: [{ query: queryUserFamilies(false), variables: { email: this.props.auth.profile.email } }]
     }).then(() => {
       ui.dismissModal()
     })

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
+import withAuth from '../utils/withAuth'
 import ui from '../ui'
 
 // import { Link } from 'react-router'
@@ -7,9 +8,10 @@ import ui from '../ui'
 
 import {
   mutationCreateInvitation,
-  queryUserOwnedFamilies
+  queryUserFamilies
 } from '../graphql'
 
+@withAuth
 @graphql(...mutationCreateInvitation())
 class AddFamilyMember extends Component {
 
@@ -29,7 +31,7 @@ class AddFamilyMember extends Component {
         name: this.state.newMemberName,
         email: this.state.newMemberEmail
       },
-      refetchQueries: [{ query: queryUserOwnedFamilies(false) }]
+      refetchQueries: [{ query: queryUserFamilies(false), variables: { email: this.props.auth.profile.email } }]
     }).then(() => {
       ui.dismissModal()
     })

@@ -36,6 +36,16 @@ class Family extends Component {
     }
   }
 
+  get kids () {
+    return this.props.kids.map((kid, i) => {
+      return <tr className='childNameBtn' key={i}>
+        <button>
+          <Link to={`/kids/${kid.id}`}>{kid.name}</Link>
+        </button>
+      </tr>
+    })
+  }
+
   render () {
     return <li>
       <h2 className='familyHeader'>{this.props.name}</h2>
@@ -47,16 +57,7 @@ class Family extends Component {
         <caption>Kids</caption>
         <li className='kidNameHeader'>Kids</li>
         <tbody>
-          <tr className='childNameBtn'>
-            <button>
-              <Link to='/childScreen'>Child Name</Link>
-            </button>
-          </tr>
-          <tr className='childNameBtn'>
-            <button>
-              <Link to='/childScreen'>Child Name</Link>
-            </button>
-          </tr>
+          {this.kids}
         </tbody>
       </table>
     </li>

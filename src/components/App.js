@@ -32,10 +32,9 @@ class App extends Component {
       <Router history={browserHistory}>
         <Router path='/' component={Layout}>
           <IndexRoute component={Home} />
-          <Route path='/addremove' component={AddRemoveChild} />
           <Route path='/spend' component={Spend} />
           <Route path='/bank' component={Bank} />
-          <Route path='/childscreen' component={ChildScreen} />
+          <Route path='/kids/:id' component={ChildScreen} />
           <Route path='/approval' component={ChoreApproval} />
           <Route path='/chores' component={ChoreList} />
           <Route path='/createpasscode' component={CreatePasscode} />
@@ -44,6 +43,7 @@ class App extends Component {
           <Route path='/group' component={GroupSelection} />
           <Route path='/login' component={LogIn} />
           <Route path='/parent/:id' component={ParentScreen} />
+          <Route path='/parent/:id/addremove' component={AddRemoveChild} />
         </Router>
       </Router>
     </ApolloProvider>

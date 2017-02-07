@@ -1,0 +1,6 @@
+mutation CreateChore($description: String!, $worth: Int!, $kidId: ID!) {
+  createChore(description: $description, worth: $worth, kidId: $kidId) {
+    id
+    description
+  }
+}
