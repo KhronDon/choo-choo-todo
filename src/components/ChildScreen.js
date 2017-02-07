@@ -2,13 +2,24 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 import homeIcon from '../Images/home_4.png'
 import creditIcon from '../Images/credit_4.png'
+import { graphql } from 'react-apollo'
 
+import { queryKid } from '../graphql'
+
+@graphql(...queryKid({
+  options: props => ({ variables: { id: props.params.id } })
+}))
 class ChildScreen extends Component {
+  kidHeader () {
+    if (this.props.queryKid.loading) return '...'
+    console.log(this.props.queryKid)
+    return this.props.queryKid.Kid.name
+  }
 
   render () {
     return <div>
       <header className='childHeader'>
-        <h2>Child Name</h2>
+        <h2>{ this.kidHeader() }</h2>
         <section className='home'>
           <Link to='/'>
             <img src={homeIcon} height='55px' width='55px' />
