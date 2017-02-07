@@ -6,9 +6,13 @@ import Modal from './Modal'
 class Layout extends Component {
 
   render () {
-    return <div>
-      {this.props.children}
-      <SessionButton />
+    return <div className='layout'>
+      <main>
+        {this.props.children}
+      </main>
+      <footer>
+        <SessionButton />
+      </footer>
       <Modal />
     </div>
   }

@@ -3,11 +3,13 @@ import { withRouter } from 'react-router'
 import { graphql } from 'react-apollo'
 import withAuth from '../utils/withAuth'
 
-import { mutationCreateFamily, queryUserOwnedFamilies } from '../graphql'
+import { mutationCreateFamily, queryUserFamilies } from '../graphql'
 
 @withRouter
 @withAuth
-@graphql(...queryUserOwnedFamilies())
+@graphql(...queryUserFamilies({
+  options: props => ({ variables: { email: props.auth.profile.email } })
+}))
 @graphql(...mutationCreateFamily())
 class GroupSelection extends Component {
 
@@ -22,7 +24,12 @@ class GroupSelection extends Component {
         ownerId: this.props.client.userId,
         name: this.state.newFamilyName
       },
-      refetchQueries: [{query: queryUserOwnedFamilies(false)}]
+      refetchQueries: [{
+        query: queryUserFamilies(false),
+        variables: {
+          email: this.props.auth.profile.email
+        }
+      }]
     }).then(() => {
       this.props.router.push('/')
     })
@@ -34,15 +41,15 @@ class GroupSelection extends Component {
   }
 
   families () {
-    if (this.props.queryUserOwnedFamilies.loading) return <li>loading</li>
-    return this.props.queryUserOwnedFamilies.user.ownedFamilies.map((family, i) => {
+    if (this.props.queryUserFamilies.loading) return <li>loading</li>
+    return this.props.queryUserFamilies.user.ownedFamilies.map((family, i) => {
       return <li key={i}>{family.name} </li>
     })
   }
 
   render () {
     return <div>
-      <ul>
+      <ul className='familiesList'>
         {this.families()}
       </ul>
       <hr />
@@ -52,7 +59,7 @@ class GroupSelection extends Component {
           value={this.state.newFamilyName}
           onChange={this._newFamilyNameChange}
         />
-        <button>Create Family</button>
+        <button className='createFamilyBtn'>Create Family</button>
       </form>
     </div>
   }

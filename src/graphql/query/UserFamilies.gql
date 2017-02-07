@@ -1,0 +1,32 @@
+query UserFamilies($email: String!) {
+  user {
+    id
+    ownedFamilies {
+      id
+      name
+    }
+    families {
+      id
+      name
+      owner {
+        id
+      }
+      invitations {
+        id
+        name
+        email
+      }
+    }
+  }
+  allInvitations(filter: {email: $email}) {
+    id
+    family {
+      id
+      name
+      owner {
+        id
+        name
+      }
+    }
+  }
+}

@@ -1,7 +1,0 @@
-mutation CreateMembership ($email: String!, $name: String!, $familyId: ID!) {
-  createMembership (email: $email, name: $name, familyId: $familyId) {
-    id
-    email
-    name
-  }
-}

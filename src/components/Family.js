@@ -9,47 +9,53 @@ class Family extends Component {
     ui.displayModal(<AddFamilyMember id={this.props.id} />)
   }
 
+  invitations () {
+    const iOwnThisFamily = this.props.owner.id === this.props.user.id
+    if (iOwnThisFamily) {
+      return <div>
+        <table className='parentList'>
+          <tbody>
+            {this.props.invitations.map((member, i) => {
+              return <tr key={i}>
+                <td className='memberName'>
+                  {member.name}
+                </td>
+                <td className='memberEmail'>
+                  {member.email}
+                </td>
+              </tr>
+            })}
+          </tbody>
+        </table>
+        <div className='controls'>
+          <button className='addFamilyMemberButton' onClick={this._addMember}>Add Family Member</button>
+        </div>
+      </div>
+    } else {
+      return null
+    }
+  }
+
   render () {
     return <li>
       <h2 className='familyHeader'>{this.props.name}</h2>
-      <table className='parentList'>
-        <caption><Link to={`/parent/${this.props.id}`}>Grown Ups</Link></caption>
+      <div className='grownUpBtn'>
+        <button><Link to={`/parent/${this.props.id}`}>Grown Ups</Link></button>
+      </div>
+      {this.invitations()}
+      <table className='childList'>
+        <caption>Kids</caption>
+        <li className='kidNameHeader'>Kids</li>
         <tbody>
-          {this.props.memberships.map((member, i) => {
-            return <tr key={i}>
-              <td className='memberName'>
-                {member.name}
-              </td>
-              <td className='memberEmail'>
-                {member.email}
-              </td>
-            </tr>
-          })}
-        </tbody>
-      </table>
-      <button className='addFamilyMemberButton' onClick={this._addMember}>Add Family Member</button>
-      <table className='chidList'>
-        <caption>Child(ren)</caption>
-        <tbody>
-          <tr>
-            <td>
-              <img src={'https://image.freepik.com/free-icon/emoticon-square-smiling-face-with-closed-eyes_318-58597.jpg'} height='50px' width='50px' />
-            </td>
-            <td>
-              <button>
-                <Link to='/childScreen'>Child Name</Link>
-              </button>
-            </td>
+          <tr className='childNameBtn'>
+            <button>
+              <Link to='/childScreen'>Child Name</Link>
+            </button>
           </tr>
-          <tr>
-            <td>
-              <img src={'https://image.freepik.com/free-icon/emoticon-square-smiling-face-with-closed-eyes_318-58597.jpg'} height='50px' width='50px' />
-            </td>
-            <td>
-              <button>
-                <Link to='/childScreen'>Child Name</Link>
-              </button>
-            </td>
+          <tr className='childNameBtn'>
+            <button>
+              <Link to='/childScreen'>Child Name</Link>
+            </button>
           </tr>
         </tbody>
       </table>

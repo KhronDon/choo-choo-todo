@@ -7,7 +7,7 @@ class AddRemoveChild extends Component {
 
   render () {
     return <div>
-      <h1 className='mainHeader'>Add Child</h1>
+      <h1 className='mainHeader'>Add Kid</h1>
       <section className='home'>
         <Link to='/'>
           <img src={homeIcon} height='50px' width='50px' />
@@ -15,7 +15,7 @@ class AddRemoveChild extends Component {
       </section>
       <form className='newChildInput'>
         <label>
-          <input type='text' name='chore' />
+          <input type='text' name='childList' />
         </label>
       </form>
       <section className='submitNewChild'>

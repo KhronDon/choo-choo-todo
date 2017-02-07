@@ -2,7 +2,7 @@
 
 .childHeader {
   text-align: center;
-  color: white;
+  color: hsla(207, 100%, 21%, 1);
 }
 
 .credits {
@@ -14,14 +14,10 @@
   margin-right: 10px;
 }
 
-.choreListHeader {
-  text-align: center;
-  color: white;
-}
-
 .choresRemaining {
   text-align: center;
-  color: white;
+  color: hsla(207, 100%, 21%, 1);
+  font-size: 30px;
 }
 
 .choreList {
@@ -46,8 +42,8 @@
   font-weight: bold;
   font-size: 25px;
   text-shadow:
-    -1px -1px 0 hsla(196, 51%, 61%, 1),
-    1px -1px 0 hsla(196, 51%, 61%, 1),
-    -1px 1px 0 hsla(196, 51%, 61%, 1),
-    1px 1px 0 hsla(196, 51%, 61%, 1);
+    -1px -1px 0 hsla(207, 100%, 21%, 1),
+    1px -1px 0 hsla(207, 100%, 21%, 1),
+    -1px 1px 0 hsla(207, 100%, 21%, 1),
+    1px 1px 0 hsla(207, 100%, 21%, 1);
 }

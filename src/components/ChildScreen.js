@@ -11,17 +11,16 @@ class ChildScreen extends Component {
         <h2>Child Name</h2>
         <section className='home'>
           <Link to='/'>
-            <img src={homeIcon} height='50px' width='50px' />
+            <img src={homeIcon} height='55px' width='55px' />
           </Link>
         </section>
         <section className='credits'>
           <Link to='/bank'>
-            <img src={creditIcon} height='50px' width='50px' />
+            <img src={creditIcon} height='55px' width='55px' />
           </Link>
         </section>
       </header>
       <h3 className='choresRemaining'>4/7</h3>
-      <h3 className='choreListHeader'>Chores</h3>
       <section className='choreList'>
         <table>
           <tbody>

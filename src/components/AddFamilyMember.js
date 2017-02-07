@@ -6,11 +6,11 @@ import ui from '../ui'
 // import homeIcon from '../Images/home_4.png'
 
 import {
-  mutationCreateMembership,
+  mutationCreateInvitation,
   queryUserOwnedFamilies
 } from '../graphql'
 
-@graphql(...mutationCreateMembership())
+@graphql(...mutationCreateInvitation())
 class AddFamilyMember extends Component {
 
   state = {
@@ -23,7 +23,7 @@ class AddFamilyMember extends Component {
   }
   _addMember = (event) => {
     event.preventDefault()
-    this.props.mutationCreateMembership({
+    this.props.mutationCreateInvitation({
       variables: {
         familyId: this.props.id,
         name: this.state.newMemberName,

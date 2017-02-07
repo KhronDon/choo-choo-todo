@@ -8,7 +8,7 @@ class ChoreList extends Component {
     return <div>
       <section className='home'>
         <Link to='/'>
-          <img src={homeIcon} height='50px' width='50px' />
+          <img src={homeIcon} height='55px' width='55px' />
         </Link>
       </section>
       <h1 className='mainHeader'>Chore List</h1>

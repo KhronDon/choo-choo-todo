@@ -7,6 +7,14 @@
 .submitNewChild {
   display: flex;
   justify-content: center;
+
+  button {
+    background-color: hsla(207, 100%, 21%, 0.5);
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 }
 
 .activeChildTable {

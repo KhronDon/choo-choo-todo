@@ -7,7 +7,7 @@ class Bank extends Component {
 
   render () {
     return <div>
-      <h2 className='mainHeader'>Bank</h2>
+      <h2 className='mainHeader'>Child's Name + Bank</h2>
       <section className='home'>
         <Link to='/'>
           <img src={homeIcon} height='50px' width='50px' />

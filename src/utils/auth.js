@@ -14,6 +14,11 @@ class Auth {
         redirectUrl: `${window.location.protocol}//${window.location.host}/`,
         responseType: 'token'
       }
+      // TODO: Put logo in here for auth0
+      // theme: {
+      //   logo: 'https://github.com/m1g/getup-app/blob/master/src/images/logo.png?raw=true',
+      //   primaryColor: '#2f383d'
+      // }
     }
 
     // Re-hydrate session on browser load/reload
@@ -59,7 +64,7 @@ class Auth {
     browserHistory.push('/')
   }
 
-  @computed get isSignedIn () { return !!this.token }
+  @computed get isSignedIn () { return this.token && this.profile }
 }
 
 const auth = new Auth()

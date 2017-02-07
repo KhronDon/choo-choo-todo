@@ -6,7 +6,7 @@
 }
 
 .addChoreHeader {
-  color: white;
+  color: hsla(207, 100%, 21%, 1);
 }
 
 .addChore {
@@ -27,19 +27,19 @@
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: hsla(196, 51%, 61%, 0.5);
-  color: white;
+  color: hsla(207, 100%, 21%, 1);
   font-size: 15px;
 }
 
 .creditsLabel {
-  color: white;
+  color: hsla(207, 100%, 21%, 1);
 }
 
 .creditInput {
   width: 40px;
   margin-bottom: 25px;
   background-color: hsla(196, 51%, 61%, 0.5);
-  color: white;
+  color: hsla(207, 100%, 21%, 1);
   font-size: 15px;
 }
 
@@ -47,8 +47,8 @@
   margin-top: 50px;
 
   button {
-    background-color: white;
-    color: hsla(196, 51%, 61%, 0.5);
+    background-color: hsla(207, 100%, 21%, 0.5);
+    color: white;
     border-radius: 5px;
     font-size: 20px;
   }
@@ -59,14 +59,15 @@
   margin-top: 100px;
 
   button {
-    background-color: white;
-    color: hsla(196, 51%, 61%, 0.5);
+    color: white;
+    background-color: hsla(207, 100%, 21%, 0.5);
     border-radius: 5px;
     font-size: 20px;
 
     a {
       text-decoration: none;
-      color: hsla(196, 51%, 61%, 0.5);
+      //color: hsla(196, 51%, 61%, 0.5);
+      color: white;
     }
   }
 }
