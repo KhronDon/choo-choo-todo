@@ -29,11 +29,11 @@ class Background extends Component {
     }
     clouds.sort((a, b) => a.t < b.t)
     this.setState({ clouds })
-    requestAnimationFrame(this.tick)
+    this.request = window.requestAnimationFrame(this.tick)
   }
 
   componentWillUnmount () {
-
+    window.cancelAnimationFrame(this.request)
   }
 
   spawn () {
@@ -54,7 +54,7 @@ class Background extends Component {
       }
     }
     this.setState({ clouds })
-    requestAnimationFrame(this.tick)
+    this.request = window.requestAnimationFrame(this.tick)
   }
 
   render () {

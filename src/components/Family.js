@@ -54,7 +54,7 @@ class Family extends Component {
       </div>
       {this.invitations()}
       <table className='childList'>
-        <li className='kidNameHeader'>Kids</li>
+        <caption className='kidNameHeader'>Kids</caption>
         <tbody>
           {this.kids}
         </tbody>
