@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import logo from '../Images/trainLogo.png'
 
 class Splash extends Component {
 
   render () {
-    return <div className='Splash'>
-      BIG LOGO HERE.
+    return <div className='splash'>
+      <img className='logo' src={logo} height='550px' width='500px' />
     </div>
   }
 }
