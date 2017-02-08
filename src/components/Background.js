@@ -2,7 +2,15 @@ import React, { Component } from 'react'
 
 const CLOUD_WIDTH = 256
 const CLOUD_HEIGHT = 128
-const CLOUD_COUNT = 8
+const CLOUD_COUNT = 6
+
+const CLOUDS = [
+  require('../images/cloud_0.svg'),
+  require('../images/cloud_1.svg')
+]
+
+import cloudBG from '../images/cloud_b.svg'
+import cloudFG from '../images/cloud_f.svg'
 
 class Background extends Component {
 
@@ -17,7 +25,11 @@ class Background extends Component {
     right: 0,
     bottom: 0,
     left: 0,
-    zIndex: -1000
+    zIndex: -1000,
+    backgroundImage: `url(${cloudFG}), url(${cloudBG})`,
+    backgroundSize: '120%',
+    backgroundPosition: '0 100%, 0 100%',
+    backgroundRepeat: 'repeat-x'
   }
 
   componentDidMount () {
@@ -65,9 +77,12 @@ class Background extends Component {
 }
 
 const Cloud = ({x, y, t}) => <div style={{
+  backgroundImage: `url(${CLOUDS[Math.round(t)]})`,
+  backgroundSize: 'contain',
+  backgroundRepeat: 'no-repeat',
   width: CLOUD_WIDTH,
   height: CLOUD_HEIGHT,
-  backgroundColor: 'white',
+  // backgroundColor: 'white',
   position: 'absolute',
   transform: `scale(${t})`,
   opacity: t,

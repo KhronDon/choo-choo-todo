@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import homeIcon from '../Images/home_4.png'
+import homeIcon from '../images/home_4.png'
 import { graphql } from 'react-apollo'
 import checkIcon from '../images/Train_check.png'
 
@@ -14,7 +14,6 @@ class ParentScreen extends Component {
 
   familyHeader () {
     if (this.props.queryFamily.loading) return '...'
-    console.log(this.props.queryFamily)
     return this.props.queryFamily.Family.name
   }
 

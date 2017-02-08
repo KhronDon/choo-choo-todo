@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import homeIcon from '../Images/home_4.png'
+import homeIcon from '../images/home_4.png'
 import bank from '../Images/Train_bank.png'
 import { graphql } from 'react-apollo'
 
@@ -13,7 +13,6 @@ import { queryKid } from '../graphql'
 class Bank extends Component {
   kidHeader () {
     if (this.props.queryKid.loading) return '...'
-    console.log(this.props.queryKid)
     return this.props.queryKid.Kid.name
   }
 

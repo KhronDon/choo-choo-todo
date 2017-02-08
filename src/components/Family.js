@@ -39,9 +39,11 @@ class Family extends Component {
   get kids () {
     return this.props.kids.map((kid, i) => {
       return <tr className='childNameBtn' key={i}>
-        <button>
-          <Link to={`/kids/${kid.id}`}>{kid.name}</Link>
-        </button>
+        <td>
+          <button>
+            <Link to={`/kids/${kid.id}`}>{kid.name}</Link>
+          </button>
+        </td>
       </tr>
     })
   }

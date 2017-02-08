@@ -33,7 +33,6 @@ class GroupSelection extends Component {
     }).then(() => {
       this.props.router.push('/')
     })
-    console.log('creating a family')
   }
 
   _newFamilyNameChange = (e) => {
@@ -48,11 +47,11 @@ class GroupSelection extends Component {
   }
 
   render () {
-    return <div>
+    return <div className='groupSelection'>
+      <h1>Your Families</h1>
       <ul className='familiesList'>
         {this.families()}
       </ul>
-      <hr />
       <form onSubmit={this._createFamily}>
         <input
           type='text'
