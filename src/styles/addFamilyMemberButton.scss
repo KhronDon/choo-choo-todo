@@ -6,8 +6,20 @@
 
 .addFamilyMember {
   color: white;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      margin: 0.5em;
+    }
+  }
 }
 
 .addMemberSubmitButton {
-  color: white;
+  color: hsla(207, 100%, 21%, 1);
+  background-color: white;
 }

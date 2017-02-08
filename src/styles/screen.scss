@@ -27,6 +27,10 @@ body,
   flex-direction: column;
 
   main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex: 1;
   }
 
@@ -56,6 +60,30 @@ h6 {
 
 button {
   font-family: $base-font-family;
+  border: none;
+  padding: 10px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.66s);
+
+  &:focus,
+  &:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.66s);
+    outline: none;
+  }
+
+  &:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.66s);
+  }
+}
+
+input {
+  color: hsla(207, 100%, 21%, 1);
+  font-family: $base-font-family;
+  font-size: 2em;
+  padding: 10px;
+  border: thick solid lightblue;
+  border-radius: 4px;
 }
 
 @import 'home';

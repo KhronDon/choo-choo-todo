@@ -4,7 +4,7 @@ import withAuth from '../utils/withAuth'
 import ui from '../ui'
 
 // import { Link } from 'react-router'
-// import homeIcon from '../Images/home_4.png'
+// import homeIcon from '../images/home_4.png'
 
 import {
   mutationCreateInvitation,

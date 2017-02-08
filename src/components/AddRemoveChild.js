@@ -38,7 +38,6 @@ class AddRemoveChild extends Component {
   }
 
   render () {
-    console.log(this.props.queryFamily)
     return <div>
       <h1 className='mainHeader'>Add Kid</h1>
       <section className='home'>
