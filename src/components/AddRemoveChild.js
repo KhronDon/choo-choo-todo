@@ -61,9 +61,7 @@ class AddRemoveChild extends Component {
       </section>
       <section className='removeSelectedChild'>
         <h4>Remove Selected Child</h4>
-        <button>
-          <img src={trashCan} height='50px' width='50px' />
-        </button>
+        <img src={trashCan} height='50px' width='50px' />
       </section>
     </div>
   }

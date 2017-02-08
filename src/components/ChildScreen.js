@@ -19,19 +19,18 @@ class ChildScreen extends Component {
   render () {
     return <div>
       <header className='childHeader'>
-        <h2>{ this.kidHeader() }</h2>
+        <h2>{`${this.kidHeader()}'s Chores`}</h2>
         <section className='home'>
           <Link to='/'>
             <img src={homeIcon} height='55px' width='55px' />
           </Link>
         </section>
         <section className='credits'>
-          <Link to='/bank'>
+          <Link to={`/kids/${this.props.params.id}/bank`}>
             <img src={creditIcon} height='55px' width='55px' />
           </Link>
         </section>
       </header>
-      <h3 className='choresRemaining'>4/7</h3>
       <section className='choreList'>
         <table>
           <tbody>

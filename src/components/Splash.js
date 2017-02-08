@@ -5,7 +5,7 @@ class Splash extends Component {
 
   render () {
     return <div className='splash'>
-      <img className='logo' src={logo} height='550px' width='500px' />
+      <img className='logo' src={logo} height='500px' width='500px' />
     </div>
   }
 }

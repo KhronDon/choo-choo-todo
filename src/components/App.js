@@ -33,7 +33,7 @@ class App extends Component {
         <Router path='/' component={Layout}>
           <IndexRoute component={Home} />
           <Route path='/spend' component={Spend} />
-          <Route path='/kids:id/bank' component={Bank} />
+          <Route path='/kids/:id/bank' component={Bank} />
           <Route path='/kids/:id' component={ChildScreen} />
           <Route path='/approval' component={ChoreApproval} />
           <Route path='/chores' component={ChoreList} />

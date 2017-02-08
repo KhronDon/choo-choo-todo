@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SessionButton from './SessionButton'
+import Background from './Background'
 
 import Modal from './Modal'
 
@@ -14,6 +15,7 @@ class Layout extends Component {
         <SessionButton />
       </footer>
       <Modal />
+      <Background />
     </div>
   }
 }

@@ -19,7 +19,7 @@ class Bank extends Component {
 
   render () {
     return <div>
-      <h2 className='mainHeader'>`{ this.kidHeader()`'s bank'` }``</h2>
+      <h2 className='mainHeader'>{`${this.kidHeader()}'s Bank `}</h2>
       <section className='home'>
         <Link to='/'>
           <img src={homeIcon} height='50px' width='50px' />
