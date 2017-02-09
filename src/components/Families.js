@@ -25,7 +25,7 @@ class Families extends Component {
   }
 
   componentWillReceiveProps (nextProps) {
-    const { loading, user, allInvitations } = this.props.queryUserFamilies
+    const { loading, user, allInvitations } = nextProps.queryUserFamilies
     if (!loading) {
       if (allInvitations.length === 0 && user.families.length === 0) {
         browserHistory.push('/group')
