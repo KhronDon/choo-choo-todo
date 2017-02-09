@@ -52,7 +52,7 @@ class ParentScreen extends Component {
       </section>
       <section className='choresPendingApproval'>
         <Link to='/chores'>
-          <img src={checkIcon} height='50px' widht='50px' />
+          <img src={checkIcon} height='50px' width='50px' />
         </Link>
       </section>
       <div className='addChore'>

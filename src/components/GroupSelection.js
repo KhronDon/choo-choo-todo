@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router'
+import { withRouter, Link } from 'react-router'
 import { graphql } from 'react-apollo'
 import withAuth from '../utils/withAuth'
 
@@ -42,7 +42,7 @@ class GroupSelection extends Component {
   families () {
     if (this.props.queryUserFamilies.loading) return <li>loading</li>
     return this.props.queryUserFamilies.user.ownedFamilies.map((family, i) => {
-      return <li key={i}>{family.name} </li>
+      return <li key={i}><Link to='/'>{family.name}</Link></li>
     })
   }
 

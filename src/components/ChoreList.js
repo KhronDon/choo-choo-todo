@@ -15,25 +15,25 @@ class ChoreList extends Component {
       <table>
         <tbody>
           <tr>
-            <td className='childName'>Child</td>
-            <td className='chore'>Chore</td>
-            <td className='choreValue'>$$</td>
+            <td className='childName'>Hank</td>
+            <td className='chore'>Do the dishes</td>
+            <td className='choreValue'>5</td>
             <td>
               <input type='checkBox' value='Check' />
             </td>
           </tr>
           <tr>
-            <td className='childName'>Child</td>
-            <td className='chore'>Chore</td>
-            <td className='choreValue'>$$</td>
+            <td className='childName'>Hank</td>
+            <td className='chore'>Take out the trash</td>
+            <td className='choreValue'>5</td>
             <td>
               <input type='checkBox' value='Check' />
             </td>
           </tr>
           <tr>
-            <td className='childName'>Child</td>
-            <td className='chore'>Chore</td>
-            <td className='choreValue'>$$</td>
+            <td className='childName'>Hank</td>
+            <td className='chore'>Clean room</td>
+            <td className='choreValue'>5</td>
             <td>
               <input type='checkBox' value='Check' />
             </td>

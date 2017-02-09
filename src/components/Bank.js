@@ -25,7 +25,7 @@ class Bank extends Component {
         </Link>
       </section>
       <img className='bank' src={bank} />
-      <h3 className='creditsAvailable'>Credits $$</h3>
+      <h3 className='creditsAvailable'>25 Credits</h3>
     </div>
   }
 }

@@ -28,7 +28,7 @@ class Family extends Component {
           </tbody>
         </table>
         <div className='controls'>
-          <button className='addFamilyMemberButton' onClick={this._addMember}>Add Family Member</button>
+          <button className='addFamilyMemberButton' onClick={this._addMember}>Add Grown Up</button>
         </div>
       </div>
     } else {
